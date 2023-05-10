@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    margin: 10px;
+    background-color: lightblue;
+    
+}
+body{
+    background-color: azure;
+}
+.container{
+    background-color:lightblue;
+    width: 100%;
+    border: 3px solid rgb(129, 201, 224);
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+
+}
+ /*Input area*/ 
+.input-box{
+    border: 3px rgb(99, 99, 99) solid;
+    width: 500px;
+    margin: auto;
+    border-radius: 8px;
+    margin-bottom: 4em;
+    background-color: rgb(255, 255, 255);
+}
+input, textarea{
+    position: relative;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+    background-color: transparent;
+    font-weight: 500;
+    width: 95%;
+    height: 15px;
+}
+textarea::-webkit-scrollbar {
+    display: none;
+}
+.add-note{
+    display: none;
+    margin-left: auto; 
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(128, 128, 128);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.add-note:hover {
+    background-color: lightblue;
+}
+#title{
+    display: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    width: 95%;
+}
+ /*saved area*/ 
+
+ 
+ .wrapper li{
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    border-radius: 8px;
+    padding: 15px 20px 20px;
+    border: 2px solid rgb(129, 201, 224);
+    animation: myAnim 1s ease 0s 1 normal forwards;
+    height: 250px;
+    
+    
+
+ }
+.wrapper{
+    padding: 25px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, 250px);
+}
+.add-box{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.note pre{
+    padding-top: 10px;
+    color: #5c5c5c;
+    font-size: 1em;
+    overflow: auto;
+    max-height: 240px;
+}
+.note pre::-webkit-scrollbar {
+    display: none;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.delete-button{
+    width: 20px;
+    height: 20px;
+    padding: 4px;
+    
+    
+}
+
+.bottom:hover{
+    cursor: pointer;
+    background-color: rgb(129, 201, 224);;
+    border-radius: 5px;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 700px){
+    .input-box{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px){
+    .input-box{
+        width: 80%;
+    }
+    .wrapper{
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, 182px);
+    }
+    .wrapper li{
+        height: 200px;
+    }
+    .bottom{
+        position: fixed;
+        left: 95%;
+        top: 135px;
+        width: 30px;
+        height: 30px;
+    }
+    .delete-button{
+        width: 15px;
+        height: 15px;
+        padding: 4px;
+        
+    }
+    .note p{
+        font-size: 1em;
+        font-weight: 600;
+        background-color: rgb(255, 255, 255);
+    }
+    .note span{
+        display:block;
+        padding-top: 10px;
+        color: #5c5c5c;
+        font-size: .8em;
+        background-color: rgb(255, 255, 255);
+    }
+}
